@@ -24,11 +24,70 @@ Special Character ✔
 Strength:
 Strong'''
 
-password = input("Enter your password")
+'''
+mini_project.py
 
-if password.isalnum() and len(password)>=8 and password.issupper() and password.islower() and password.isalnum() :
+Password Strength Checker
 
-    print("Length ✔\nUppercase ✔\nLowercase ✔\nDigit ✔\nSpecial Character ✔")
-    print("Strength: Strong")
+Requirements:
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one digit
+- At least one special character
+'''
+
+password = input("Enter your password: ")
+
+has_upper = False
+has_lower = False
+has_digit = False
+has_special = False
+
+for char in password:
+    if char.isupper():
+        has_upper = True
+    elif char.islower():
+        has_lower = True
+    elif char.isdigit():
+        has_digit = True
+    elif not char.isalnum():
+        has_special = True
+
+print("\nPassword Report")
+
+if len(password) >= 8:
+    print("Length ✔")
 else:
-    print("please write strong password")
+    print("Length ✘")
+
+if has_upper:
+    print("Uppercase ✔")
+else:
+    print("Uppercase ✘")
+
+if has_lower:
+    print("Lowercase ✔")
+else:
+    print("Lowercase ✘")
+
+if has_digit:
+    print("Digit ✔")
+else:
+    print("Digit ✘")
+
+if has_special:
+    print("Special Character ✔")
+else:
+    print("Special Character ✘")
+
+if (
+    len(password) >= 8
+    and has_upper
+    and has_lower
+    and has_digit
+    and has_special
+):
+    print("\nStrength: Strong 💪")
+else:
+    print("\nStrength: Weak ❌")
