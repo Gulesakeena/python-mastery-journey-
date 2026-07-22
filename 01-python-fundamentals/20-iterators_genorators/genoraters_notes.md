@@ -576,17 +576,14 @@ One generator can use another.
 
 ```python
 def numbers():
-
-    for i in range(1, 6):
-        yield i
-
+    for i in range(1,6)
+    yield i
 def squares(values):
-
     for value in values:
-        yield value * value
+        yield value*value
 
-for num in squares(numbers()):
-    print(num)
+for i in range(numbers()):
+    print(i)
 ```
 
 Output
