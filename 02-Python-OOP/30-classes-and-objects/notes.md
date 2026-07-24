@@ -168,7 +168,9 @@ Each has different
 But all are Cars.
 
 ---
-
+# Function vs method
+method is a function that s written inside a class like L.append(1) is a method of list class
+function i a normal function without a class like len() has no class it can be use by anythingS
 # Why Create Multiple Objects?
 
 Instead of writing
