@@ -22,7 +22,7 @@ print(b)
 print(c)
 
 # Output variables
-print(name.age,city)
+print(name,age,city)
 
 # String concatenation
 first_name="Gul e"
